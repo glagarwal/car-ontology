@@ -1,0 +1,421 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#"
+     xml:base="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:car-ontology="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#isEquippedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#isEquippedWith">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#isEquippedWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#car"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#isEquippedWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#parts"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#manufacturedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#manufacturedBy">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#isEquippedWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#car"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#manufacturedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#brand"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#VIN -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#VIN">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#car"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#companyName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#companyName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#brand"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#cost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#cost">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#engineNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#engineNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#engine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#I4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#I4">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#I6 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#I6">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#SUV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#SUV">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#bodyType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#V6 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#V6">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#V8 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#V8">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#bodyType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#bodyType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#brand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#brand"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#car -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#car"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#classType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#classType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#convertible -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#convertible">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#bodyType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#daily -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#daily">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#classType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#parts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#family -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#family">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#classType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#hatchback -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#hatchback">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#bodyType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#luxury -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#luxury">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#classType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#model -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#model">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#numberOfSeats -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#numberOfSeats">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#parts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#parts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#parts"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#sedan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#sedan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#bodyType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#sports -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#sports">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#classType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#2_seats -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#2_seats">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#numberOfSeats"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#5_seats -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#5_seats">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#numberOfSeats"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#7_seats -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#7_seats">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#numberOfSeats"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#brand1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#brand1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#brand"/>
+        <companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audi</companyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#brand2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#brand2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#brand"/>
+        <companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyundai</companyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#model1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#model1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#model"/>
+        <isEquippedWith rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#parts2"/>
+        <manufacturedBy rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#brand2"/>
+        <VIN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h28347y2ecb2823bfd8u3hqdfw</VIN>
+        <cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25000</cost>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sonata</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#model2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#model2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#model"/>
+        <isEquippedWith rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#parts1"/>
+        <manufacturedBy rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#brand1"/>
+        <VIN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dkfoj1234567890dfg123456</VIN>
+        <cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</cost>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R8</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#parts1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#parts1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#parts"/>
+        <engineNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9584938</engineNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#parts2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#parts2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#engine"/>
+        <engineNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5287428</engineNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#I4"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#I6"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#V6"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#V8"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#SUV"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#convertible"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#hatchback"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#sedan"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#2_seats"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#5_seats"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gaurav/ontologies/2019/2/car-ontology#7_seats"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
