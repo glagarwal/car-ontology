@@ -26,3 +26,6 @@ Therefore isManufacturedBy and isEquipedBy are object properties.
 
 
 "brand" (has a companyName literal)
+
+The generated ontology graph using the VOWL plugin is:
+![car ontology graph](car-ontology-graph.png?raw=true "Visual ontology graph of car-ontology")
